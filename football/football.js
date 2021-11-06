@@ -1,7 +1,7 @@
 class Person{
     #id;
     constructor(firstName, sureName, salary, age, id){
-        this.id = id;
+        this.#id = id;
         this.firstName = firstName;
         this.sureName = sureName;
         this.salary = salary;
@@ -31,7 +31,7 @@ class Person{
 
 class Player extends Person{
     #id;
-    constructor(firstName, sureName, salary, age, id, strongLeg, position, celebrationSentence){
+    constructor(firstName, sureName, salary, age, strongLeg, position, celebrationSentence, id){
         super(firstName, sureName, salary, age, id);
         this.strongLeg = strongLeg;
         this.position = position;

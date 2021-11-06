@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
       <!-- Font Awesome -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
       <!-- Bootstrap core CSS -->
@@ -15,12 +17,117 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>FootBall Dream Team</h1>
-    <div>
-        <p>Build your own unique football team</p>
+    <div id="soccer-field" class="main-container">
+    <h1 id="main-head">FootBall Dream Team</h1>
     </div>
-    <div id="soccer-field" class="container";>
-        <header>Yo</header>
+
+    <!--Field-->
+
+        <div id="field-container" class="container">
+            <div class="field">
+                <div class="left">
+                    <span class="halfway-line"></span>
+                    <span class="centre-circle"></span>
+                    <span class="centre-mark"></span>
+                    <span class="penalty-area"></span>
+                    <span class="penalty-mark"></span>
+                    <span class="penalty-arc"></span>
+                    <span class="goal-area"></span>
+                    <span class="corner-arc"></span>
+                </div>
+                <div class="right">
+                    <span class="halfway-line"></span>
+                    <span class="centre-circle"></span>
+                    <span class="centre-mark"></span>
+                    <span class="penalty-area"></span>
+                    <span class="penalty-mark"></span>
+                    <span class="penalty-arc"></span>
+                    <span class="goal-area"></span>
+                    <span class="corner-arc"></span>
+                </div>
+            </div>
+        </div>
+
+
+    <!--Player Sign Up Form-->
+    <div class="testbox" id="sign-container">
+        <form id="player-sign-form">
+          <div class="banner">
+            <header id="set-up-header">Player Set Up 1/11</header>
+          </div>
+
+          <p class="top-info">Let's set up your player!</p>
+
+          <div class="item">
+            <p>Name<span class="required">*</span></p>
+            <div class="name-item">
+              <input id="first-name-input" type="text" name="name" placeholder="First" required/>
+              <input id="last-name-input" type="text" name="name" placeholder="Last" required/>
+            </div>
+          </div>
+
+          <div class="question">
+            <p>Strong Leg<span class="required">*</span></p>
+            <div class="question-answer">
+              <label><input id="right-input" type="radio" value="Left" name="strongLeg" required/> <span>Right</span></label>
+              <label><input id="left-input" type="radio" value="Right" name="strongLeg" required/> <span>Left</span></label>
+            </div>
+          </div>
+
+          <div class="item">
+            <p>Age<span class="required">*</span></p>
+            <input id="age-input" type="number" name="name"/>
+          </div>
+
+          <div class="item">
+            <p>Salary<span class="required">*</span></p>
+            <input id="salary-input" type="number" name="name"/>
+          </div>
+
+          <div class="item">
+            <p>Celebration Sentence<span class="required">*</span></p>
+            <input id="celeb-input" type="text" name="name" required/>
+          </div>
+
+          <div class="city-item">
+            <p>Position<span class="required">*</span></p>
+              <select id="position-select">
+                <option value="">Position</option>
+                <option value="LCB">LCB</option>
+                <option value="RCB">RCB</option>
+                <option value="LB">LB</option>
+                <option value="RB">RB</option>
+                <option value="CDM">CDM</option>
+                <option value="LCM">LCM</option>
+                <option value="RCM">RCM</option>
+                <option value="LW">LW</option>
+                <option value="RW">RW</option>
+                <option value="ST">ST</option> 
+              </select>
+          </div>
+
+          <div class="btn-block">
+            <button id="sign-player" type="button">Sign</button>
+          </div>
+
+        </form>
+    </div>
+      
+
+    <!--Pop up login form-->
+    <div id="login-container">
+        <button id="openButton" class="open-button" onclick="openForm()">Login</button>
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <h2>Login</h2>
+            
+                <label for="username"><b>Username</b></label>
+                <input id="username-input" type="text" placeholder="Enter User Name" name="username" required>
+
+                <button id="login-button" type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
